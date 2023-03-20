@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul ol li {
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+path {
+    fill: #ECCEA7;
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+path:hover {
+    fill: #FA9E27;
+}
+
+.cria-card {
+    width: 400px;
+    height: 700px;
+    background-color: #F5E7D3;
+}
+
+.infos {
+    display: flex;
+}
+
+.sigla-estado {
+    grid-row: estado-info;
+    display: flex;
+    background-color: #FA9E27;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: #fff 5px solid;
+    margin: 30px;
+}
+
+.sigla {
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    align-items: center;
+    padding-left: 15%;
+}
+
+.dados-estado {
+    padding: 35px;
+}
+
+.nome-estado {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FA9E27;
+}
+
+.capital-estado {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.regiao-estado {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.lista-cidades {
+    margin: 35px;
+    list-style: none;
+}
+
+.cidade {
+    font-weight: bold;
+}
