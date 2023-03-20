@@ -4,15 +4,15 @@ const mapa = document.querySelector('svg')
 
 const preencherDados = async(sigla) => {
     const preencherHeader = await preencherDadosHeader(sigla)
-    document.getElementById('siglaDoEstado').innerText = preencherHeader.uf
-    document.getElementById('nomeEstado').innerText = preencherHeader.descricao
+    document.getElementById('siglaDoEstado').innerText = preencherHeader.sigla
+    document.getElementById('nomeEstado').innerText = preencherHeader.nome
     document.getElementById('nomeCapital').innerText = preencherHeader.capital
     document.getElementById('nomeRegiao').innerText = preencherHeader.regiao
 
 }
 
 const preencherDadosHeader = async(sigla) => {
-    const url = `http://localhost:8080/estados/${sigla}`
+    const url = `http://localhost:8080/estado/${sigla}`
     const response = await fetch(url)
     const estado = await response.json()
 
