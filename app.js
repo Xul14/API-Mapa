@@ -9,18 +9,15 @@ const preencherDados = async(sigla) => {
     document.getElementById('nomeCapital').innerText = preencherHeader.capital
     document.getElementById('nomeRegiao').innerText = preencherHeader.regiao
 
-//   const preencherListaCidades = await preencherLista(sigla)
-
-//     const ul = document.getElementById('nome-cidades')
-
-//     preencherListaCidades.cidades.forEach(function (cidade) {
-//         const cidades = document.createElement('li')
-//         cidades.textContent = cidade
-//         ul.append(cidades)
-//     })
-    
     const preencherListaCidades = await preencherLista(sigla)
-    document.getElementById('nome-cidades').innerHTML = preencherListaCidades.cidades
+
+    const preencherCidades = preencherListaCidades.cidades.map((cidade) => {
+        const li = document.createElement('li')
+        li.textContent = cidade
+        return li
+    })
+
+    document.getElementById('nome-cidades').replaceChildren(...preencherCidades)
 
 }
 

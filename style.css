@@ -12,9 +12,11 @@ ul ol li {
 body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
-    height: 100vh;
     gap: 10%;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(#F5E7D3 0%, #F5E7D3 127px, #F5E7D3 127px, #fff 100%);
 }
 
 path {
@@ -31,8 +33,19 @@ path:hover {
 
 .cria-card {
     min-width: 400px;
-    min-height: 700px;
-    background-color: #F5E7D3;
+    height: 600px;
+    overflow-y: scroll;
+    background-color: #F1DDC2;
+    ;
+    border-radius: 5px;
+}
+
+.cria-card::-webkit-scrollbar {
+    background-color: #ECCEA7;
+}
+
+.cria-card::-webkit-scrollbar-thumb {
+    background-color: #FA9E27;
 }
 
 .cria-header {
@@ -51,14 +64,14 @@ path:hover {
     border-radius: 50%;
     border: #fff 5px solid;
     margin: 30px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .dados-header {
     padding: 30px;
 }
 
-
-p{
+p {
     font-weight: bold;
 }
 
@@ -77,13 +90,15 @@ p{
     font-weight: normal;
 }
 
-.lista-cidades{
+.lista-cidades {
     margin: 35px;
+    overflow: hidden;
 }
 
-.lista-cidades ul{
+.lista-cidades ul {
     list-style: none;
+    height: 100%;
     display: grid;
-    grid-template-columns: 50% 50% 50%;
+    grid-template-columns: 50% 50%;
     font-size: 15px;
 }
