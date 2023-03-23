@@ -36,8 +36,8 @@ path:hover {
     height: 600px;
     overflow-y: scroll;
     background-color: #F1DDC2;
-    ;
     border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .cria-card::-webkit-scrollbar {
