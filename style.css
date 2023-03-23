@@ -6,11 +6,15 @@
 
 ul ol li {
     font-style: normal;
+    text-decoration: none;
 }
 
 body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    gap: 10%;
 }
 
 path {
@@ -26,60 +30,60 @@ path:hover {
 }
 
 .cria-card {
-    width: 400px;
-    height: 700px;
+    min-width: 400px;
+    min-height: 700px;
     background-color: #F5E7D3;
 }
 
-.infos {
+.cria-header {
     display: flex;
 }
 
-.sigla-estado {
-    grid-row: estado-info;
+.sigla {
     display: flex;
-    background-color: #FA9E27;
     height: 100px;
     width: 100px;
+    color: #fff;
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #FA9E27;
     border-radius: 50%;
     border: #fff 5px solid;
     margin: 30px;
 }
 
-.sigla {
-    display: flex;
-    color: #fff;
-    font-weight: bold;
-    font-size: 2.5rem;
-    align-items: center;
-    padding-left: 15%;
+.dados-header {
+    padding: 30px;
 }
 
-.dados-estado {
-    padding: 35px;
+
+p{
+    font-weight: bold;
 }
 
 .nome-estado {
     font-size: 2.5rem;
-    font-weight: bold;
     color: #FA9E27;
 }
 
 .capital-estado {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .regiao-estado {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
-.lista-cidades {
+.lista-cidades{
     margin: 35px;
-    list-style: none;
 }
 
-.cidade {
-    font-weight: bold;
+.lista-cidades ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+    font-size: 15px;
 }
